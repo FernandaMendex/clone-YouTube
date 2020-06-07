@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ddd;
+}
+
+header, section {
+    padding: 5rem;
+}
+
+header {
+    background-color: aqua;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    /* grid-row-gap: 1rem; */
+    grid-template-areas:
+        'video-player video-player'
+        'video-info video-info'
+        'actions actions'
+        'channel subscribe'
+        'up-next up-next';
+    
+}
+
+.video-player {
+    grid-area: video-player;
+    background-color: red;
+    
+}
+
+.video-info {
+    grid-area: video-info;
+    background-color: yellow;
+}
+
+.actions {
+    grid-area: actions;
+    background-color: green;
+}
+
+.channel {
+    grid-area: channel;
+    background-color: hotpink;
+}
+
+.subscribe {
+    grid-area: subscribe;
+    background-color: teal;
+}
+
+.ad {
+    display: none;
+    grid-area: ad;
+    background-color: tomato;
+}
+
+.up-next {
+    grid-area: up-next;
+    background-color: violet;
+}
