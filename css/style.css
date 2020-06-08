@@ -47,7 +47,6 @@ main {
     grid-template-areas:
         'video-player video-player'
         'video-info video-info'
-        'actions actions'
         'channel subscribe'
         'up-next up-next';
 }
@@ -71,13 +70,68 @@ main {
 }
 
 .video-info {
+    display: grid;
     grid-area: video-info;
-    background-color: yellow;
+    grid-template-areas:
+        'title title'
+        'views actions';
+}
+
+.title {
+    display: grid;
+    grid-area: title;
+    grid-template-columns: auto;
+    padding: 0 1rem 0.5rem 1rem;
+}
+
+.title h1 {
+    font-size: 18px;
+    font-weight: normal;
+    margin-bottom: 1rem;
+}
+
+.title h1 a {
+    text-decoration: none;
+}
+
+.views {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: left;
+    align-items: center;
+    grid-area: views;
+    padding: 0 1rem 0.5rem 1rem;
+    color: #636363;
 }
 
 .actions {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-content: space-evenly;
+    align-items: end;
     grid-area: actions;
-    background-color: green;
+    border-bottom: 1px solid #ddd;
+    padding: 0 1rem 0.5rem 1rem;
+    color: #636363;
+}
+
+.action {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 0.25rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+}
+
+.action:last-child {
+    grid-template-columns: auto;
+}
+
+.action svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
 }
 
 .channel {
@@ -116,7 +170,7 @@ main {
         grid-template-areas:
             'video-player video-player ad'
             'video-player video-player up-next'
-            'video-info actions up-next'
+            'video-info video-info up-next'
             'channel subscribe up-next';
     }
 
