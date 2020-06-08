@@ -135,13 +135,33 @@ main {
 }
 
 .channel {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;
+    grid-gap: 1rem;
     grid-area: channel;
-    background-color: hotpink;
+    padding: 1rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.channel img {
+    width: 48px;
+    border-radius: 50%;
+}
+
+.channel .subscribes {
+    color: #777;
+    font-size: 0.8rem;
+    margin-bottom: 0.8rem;
+}
+
+.channel .channel-description {
+    font-size: 0.8rem;
 }
 
 .subscribe {
     grid-area: subscribe;
-    background-color: teal;
+    background-color: #8bc34a;
 }
 
 .ad {
