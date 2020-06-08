@@ -121,7 +121,7 @@ main {
     grid-gap: 0.25rem;
     justify-content: center;
     align-items: center;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
 }
 
 .action:last-child {
@@ -159,8 +159,19 @@ main {
         display: none;
     }
 
-    .video-info span {
+    .video-info {
+        grid-template-areas:
+        'title title'
+        'actions actions';
+
+    }
+
+    .views {
         display: none;
+    }
+
+    .actions {
+        justify-content: space-between;
     }
 }
 
