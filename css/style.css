@@ -75,6 +75,8 @@ main {
     grid-template-areas:
         'title title'
         'views actions';
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
 }
 
 .title {
@@ -110,7 +112,6 @@ main {
     justify-content: space-evenly;
     align-items: end;
     grid-area: actions;
-    border-bottom: 1px solid #ddd;
     padding: 0 1rem 0.5rem 1rem;
     color: #636363;
 }
@@ -176,7 +177,7 @@ main {
 
 .ad {
     grid-area: ad;
-    margin: 1rem;
+    margin: 0 1rem 1rem 1rem;
     padding: 4rem;
     text-align: center;
     background-color: #2196f3;
@@ -188,11 +189,22 @@ main {
     margin: 1rem;
 }
 
+.next {
+    grid-gap: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.next p:first-child {
+    color: #222;
+    font-weight: normal;
+    font-size: 1rem;
+}
+
 .up-next a {
     display: grid;
     grid-template-columns: 3fr 4fr;
     grid-gap: 0.5rem;
-    padding-bottom: 0.75rem;
+    padding: 1rem 0 1rem 0;
 }
 
 .up-next img {
@@ -207,7 +219,7 @@ main {
 
 .up-next p {
     color: #888;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
 }
 
 .up-next a {
@@ -242,7 +254,7 @@ main {
     }
 
     main {
-        margin: 50px;
+        margin: 20px 50px;
         grid-template-columns: 4fr 4fr 4fr;
         grid-template-areas:
             'video-player video-player ad'
@@ -250,10 +262,6 @@ main {
             'video-info video-info up-next'
             'channel subscribe up-next'
             '. . up-next';
-    }
-
-    .video-info {
-        border-bottom: 1px solid #ddd;
     }
 
 }
