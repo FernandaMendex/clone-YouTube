@@ -40,13 +40,6 @@ header {
     text-decoration: none;
 }
 
-.subscribe .button {
-    border: none;
-    background-color: #fb2300;
-    color: white;
-    padding: 10px 16px;
-}
-
 main {
     margin: auto;
     display: grid;
@@ -173,6 +166,14 @@ main {
     text-align: right;
 }
 
+.subscribe .button {
+    border: none;
+    background-color: #fb2300;
+    color: white;
+    padding: 10px 16px;
+    font-size: 0.8rem;
+}
+
 .ad {
     grid-area: ad;
     margin: 1rem;
@@ -189,12 +190,12 @@ main {
 
 .up-next a {
     display: grid;
-    grid-template-columns: 4fr 5fr;
+    grid-template-columns: 3fr 4fr;
     grid-gap: 0.5rem;
     padding-bottom: 0.75rem;
 }
 
-.up-next image {
+.up-next img {
     width: 100%;
 }
 
@@ -241,12 +242,18 @@ main {
     }
 
     main {
-        max-width: 1200px;
+        margin: 50px;
+        grid-template-columns: 4fr 4fr 4fr;
         grid-template-areas:
             'video-player video-player ad'
             'video-player video-player up-next'
             'video-info video-info up-next'
-            'channel subscribe up-next';
+            'channel subscribe up-next'
+            '. . up-next';
+    }
+
+    .video-info {
+        border-bottom: 1px solid #ddd;
     }
 
 }
